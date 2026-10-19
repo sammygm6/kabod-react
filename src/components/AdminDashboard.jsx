@@ -45,9 +45,44 @@ export default function AdminDashboard({ onLogout }) {
 
   return (
     <div style={{ maxWidth: '600px', margin: '40px auto', padding: '20px', background: '#f9f9f9', borderRadius: '8px', color: '#333', fontFamily: 'sans-serif' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <h2>Panel de Administración — Iglesia KABOD</h2>
-        <button onClick={onLogout} style={{ padding: '6px 12px', background: '#dc3545', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Salir</button>
+      
+      {/* 🧭 Updated Navigation Layout Header Block */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '15px' }}>
+        <h2 style={{ margin: 0, fontSize: '20px', color: '#111' }}>Panel de Administración — Iglesia KABOD</h2>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          {/* ⛪ Public Site Return Link */}
+          <a 
+            href="/" 
+            style={{ 
+              padding: '8px 14px', 
+              background: '#64748b', 
+              color: '#fff', 
+              textDecoration: 'none', 
+              borderRadius: '4px', 
+              fontSize: '14px', 
+              fontWeight: 'bold',
+              display: 'inline-block' 
+            }}
+          >
+            🏠 Ver Sitio Web
+          </a>
+          {/* 🚪 Session Logout Button */}
+          <button 
+            onClick={onLogout} 
+            style={{ 
+              padding: '8px 14px', 
+              background: '#dc3545', 
+              color: '#fff', 
+              border: 'none', 
+              borderRadius: '4px', 
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: 'bold' 
+            }}
+          >
+            Salir
+          </button>
+        </div>
       </div>
 
       {message.text && (
