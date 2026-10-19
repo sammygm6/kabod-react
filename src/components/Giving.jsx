@@ -1,5 +1,4 @@
 import React from 'react';
-import { church } from '../siteData.js';
 
 export default function Giving() {
   const paypalMeLink = "https://paypal.me"; 
@@ -8,6 +7,7 @@ export default function Giving() {
     <section id="giving" style={{ padding: '80px 20px', backgroundColor: '#0f172a', color: '#ffffff', fontFamily: 'sans-serif' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
         
+        {/* Header Block */}
         <p style={{ textTransform: 'uppercase', letterSpacing: '0.1em', color: '#38bdf8', fontWeight: 'bold', fontSize: '14px', marginBottom: '10px' }}>
           Generosidad
         </p>
@@ -18,32 +18,58 @@ export default function Giving() {
           Cada una de sus siembras, diezmos y ofrendas nos ayuda a seguir expandiendo el Reino de Dios y a bendecir a nuestra comunidad de fe. ¡Gracias por apoyar la visión!
         </p>
 
+        {/* Two-Column Card Grid */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'center', alignItems: 'stretch' }}>
           
+          {/* CARD 1: ISOLATED NEAT ZELLE QR CODE */}
           <div style={{ backgroundColor: '#1e293b', padding: '40px 30px', borderRadius: '16px', border: '1px solid #334155', width: '100%', maxWidth: '420px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}>
             <div>
-              <div style={{ fontSize: '40px', marginBottom: '20px' }}>📱</div>
+              <div style={{ fontSize: '40px', marginBottom: '10px' }}>📱</div>
               <h3 style={{ fontSize: '24px', fontWeight: 'bold', margin: '0 0 10px 0', color: '#fff' }}>Ofrendar por Zelle</h3>
               <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.5', margin: '0 0 25px 0' }}>
-                Puede sembrar directamente desde la aplicación de su banco favorito sin comisiones adicionales utilizando nuestra cuenta oficial.
+                Escanee el código QR oficial directamente desde la aplicación de su banco móvil para enviar su contribución al instante.
               </p>
               
+              {/* Native Precision CSS Crop Container Box */}
+              <div style={{ background: '#ffffff', padding: '15px', borderRadius: '14px', display: 'inline-block', marginBottom: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.15)' }}>
+                <div style={{ width: '180px', height: '180px', overflow: 'hidden', position: 'relative', borderRadius: '6px' }}>
+                  <img 
+                    src="/assets/zelle-qr.png" 
+                    alt="Zelle QR Code" 
+                    style={{ 
+                      width: '320px', 
+                      height: 'auto', 
+                      position: 'absolute', 
+                      top: '-158px',     /* Centers directly onto the barcode matrix */
+                      left: '-70px',     /* Crops out the phone interface side borders */
+                      display: 'block' 
+                    }} 
+                  />
+                </div>
+                {/* Brand Identifier */}
+                <div style={{ color: '#7414CA', fontWeight: 'bold', fontSize: '13px', marginTop: '10px', letterSpacing: '0.05em' }}>
+                  🟣 Código Escaneable Zelle®
+                </div>
+              </div>
+
+              {/* Verified Details Block */}
               <div style={{ backgroundColor: '#0f172a', padding: '15px', borderRadius: '8px', border: '1px dotted #475569', textAlign: 'left', marginBottom: '20px' }}>
-                <div style={{ marginBottom: '8px' }}>
-                  <span style={{ color: '#64748b', fontSize: '12px', display: 'block', textTransform: 'uppercase', fontWeight: 'bold' }}>Correo Electrónico / Identificador</span>
-                  <span style={{ color: '#38bdf8', fontSize: '16px', fontWeight: 'bold', wordBreak: 'break-all' }}>{church.email || "ofrendas@ministeriokabod.org"}</span>
+                <div style={{ marginBottom: '10px' }}>
+                  <span style={{ color: '#64748b', fontSize: '11px', display: 'block', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.05em' }}>Correo Electrónico Oficial</span>
+                  <span style={{ color: '#38bdf8', fontSize: '15px', fontWeight: 'bold', wordBreak: 'break-all' }}>jehovakabodministries@gmail.com</span>
                 </div>
                 <div>
-                  <span style={{ color: '#64748b', fontSize: '12px', display: 'block', textTransform: 'uppercase', fontWeight: 'bold' }}>A Nombre de (Titular)</span>
-                  <span style={{ color: '#fff', fontSize: '15px', fontWeight: 'medium' }}>Ministerio Kabod Inc.</span>
+                  <span style={{ color: '#64748b', fontSize: '11px', display: 'block', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.05em' }}>A Nombre de (Titular Registrado)</span>
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: '500' }}>MINISTERIO APOSTOLICO Y PROFETICO</span>
                 </div>
               </div>
             </div>
             <p style={{ color: '#64748b', fontSize: '12px', margin: 0, fontStyle: 'italic' }}>
-              📌 Busque la opción "Send Money with Zelle" en su banca móvil.
+              📌 Abra la app de su banco, elija "Scan QR" y apunte la cámara a este recuadro.
             </p>
           </div>
 
+          {/* CARD 2: PAYPAL / CARD */}
           <div style={{ backgroundColor: '#1e293b', padding: '40px 30px', borderRadius: '16px', border: '1px solid #334155', width: '100%', maxWidth: '420px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}>
             <div>
               <div style={{ fontSize: '40px', marginBottom: '20px' }}>💳</div>
@@ -68,7 +94,6 @@ export default function Giving() {
                   fontWeight: 'bold', 
                   fontSize: '16px', 
                   textAlign: 'center',
-                  transition: 'background-color 0.2s',
                   marginBottom: '15px'
                 }}
               >
