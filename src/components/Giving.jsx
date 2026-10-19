@@ -7,6 +7,7 @@ export default function Giving() {
     <section id="giving" style={{ padding: '80px 20px', backgroundColor: '#0f172a', color: '#ffffff', fontFamily: 'sans-serif' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
         
+        {/* Header Block */}
         <p style={{ textTransform: 'uppercase', letterSpacing: '0.1em', color: '#38bdf8', fontWeight: 'bold', fontSize: '14px', marginBottom: '10px' }}>
           Generosidad
         </p>
@@ -17,9 +18,10 @@ export default function Giving() {
           Cada una de sus siembras, diezmos y ofrendas nos ayuda a seguir expandiendo el Reino de Dios y a bendecir a nuestra comunidad de fe. ¡Gracias por apoyar la visión!
         </p>
 
+        {/* Two-Column Card Grid */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'center', alignItems: 'stretch' }}>
           
-          {/* CARD 1: ZELLE CARD */}
+          {/* CARD 1: PERFECT UNALLOCATED ZELLE QR CODE */}
           <div style={{ backgroundColor: '#1e293b', padding: '40px 30px', borderRadius: '16px', border: '1px solid #334155', width: '100%', maxWidth: '420px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}>
             <div>
               <div style={{ fontSize: '40px', marginBottom: '10px' }}>📱</div>
@@ -28,27 +30,27 @@ export default function Giving() {
                 Escanee el código QR oficial directamente desde la aplicación de su banco móvil para enviar su contribución al instante.
               </p>
               
-              {/* Corrected Image Path Container */}
-              <div style={{ background: '#ffffff', padding: '15px', borderRadius: '14px', display: 'inline-block', marginBottom: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.15)' }}>
-                <div style={{ width: '180px', height: '180px', overflow: 'hidden', position: 'relative', borderRadius: '6px' }}>
+              {/* Clean, Full Square QR Code Container */}
+              <div style={{ background: '#ffffff', padding: '20px', borderRadius: '14px', display: 'inline-block', marginBottom: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.15)' }}>
+                <div style={{ width: '220px', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '6px' }}>
                   <img 
                     src="/zelle-qr.png" 
                     alt="Zelle QR Code" 
                     style={{ 
-                      width: '320px', 
-                      height: 'auto', 
-                      position: 'absolute', 
-                      top: '-158px',     
-                      left: '-70px',     
+                      width: '100%',       /* Forces the full image to fit the container width */
+                      height: '100%',      /* Forces the full image to fit the container height */
+                      objectFit: 'contain', /* Scales the image perfectly so nothing gets cropped out */
                       display: 'block' 
                     }} 
                   />
                 </div>
-                <div style={{ color: '#7414CA', fontWeight: 'bold', fontSize: '13px', marginTop: '10px', letterSpacing: '0.05em' }}>
+                {/* Brand Identifier */}
+                <div style={{ color: '#7414CA', fontWeight: 'bold', fontSize: '13px', marginTop: '12px', letterSpacing: '0.05em' }}>
                   🟣 Código Escaneable Zelle®
                 </div>
               </div>
 
+              {/* Verified Details Block */}
               <div style={{ backgroundColor: '#0f172a', padding: '15px', borderRadius: '8px', border: '1px dotted #475569', textAlign: 'left', marginBottom: '20px' }}>
                 <div style={{ marginBottom: '10px' }}>
                   <span style={{ color: '#64748b', fontSize: '11px', display: 'block', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.05em' }}>Correo Electrónico Oficial</span>
